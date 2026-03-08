@@ -1,0 +1,23 @@
+{
+  "name": "telegram-clone",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "clients/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:auth\" \"npm run dev:web\"",
+    "dev:mongodb": "concurrently \"npm run dev:mongodb --workspace=@telegram/auth-service\" \"npm run dev:web\"",
+    "dev:auth": "npm run dev --workspace=@telegram/auth-service",
+    "dev:web": "npm run dev --workspace=@telegram/web-client",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.3.3"
+  }
+}
