@@ -44,6 +44,7 @@ export default function MainPage() {
   const [sendingFile, setSendingFile] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const loadChatsTimeoutRef = useRef<NodeJS.Timeout | null>(null); // For debouncing loadChats
   const mediaInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
@@ -482,10 +483,15 @@ export default function MainPage() {
         })
       );
 
-      // Reload chats to get updated online counts for groups
-      if (sessionToken) {
-        loadChats();
+      // Debounce loadChats to avoid multiple rapid calls
+      if (loadChatsTimeoutRef.current) {
+        clearTimeout(loadChatsTimeoutRef.current);
       }
+      loadChatsTimeoutRef.current = setTimeout(() => {
+        if (sessionToken) {
+          loadChats();
+        }
+      }, 300); // Wait 300ms before reloading chats
 
       // Update selected chat if it's the same user
       if (selectedChat && selectedChat.type === 'private' && selectedChat.participant?.userId === userId && selectedChat.participant) {
