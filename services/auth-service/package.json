@@ -4,6 +4,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.simple.ts",
+    "dev:simple": "tsx src/index.simple.ts",
+    "dev-simple": "tsx src/index.simple.ts",
     "dev:mongodb": "tsx watch src/index.mongodb.ts",
     "dev:full": "tsx watch src/index.ts",
     "build": "tsc",
