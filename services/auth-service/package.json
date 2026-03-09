@@ -7,7 +7,8 @@
     "dev:mongodb": "tsx watch src/index.mongodb.ts",
     "dev:full": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.simple.js",
+    "start:simple": "tsx src/index.simple.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
