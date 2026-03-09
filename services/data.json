@@ -52,7 +52,7 @@
       "bio": "Maqsad: 600 qadamni tezroq tugatish",
       "profilePhotoUrl": "http://localhost:4000/uploads/1772969751251-paysj3.jpg",
       "isOnline": true,
-      "lastSeen": "2026-03-08T16:13:38.004Z",
+      "lastSeen": "2026-03-09T05:41:18.009Z",
       "createdAt": "2026-03-08T07:46:55.068Z",
       "updatedAt": "2026-03-08T11:35:51.253Z",
       "settings": {
@@ -79,7 +79,7 @@
       "bio": "Maqsad: 600 qadamni tezroq tugatish",
       "profilePhotoUrl": "http://localhost:4000/uploads/1772969779751-11l7e.jpg",
       "isOnline": true,
-      "lastSeen": "2026-03-08T16:14:54.695Z",
+      "lastSeen": "2026-03-09T05:41:17.951Z",
       "createdAt": "2026-03-08T07:48:04.575Z",
       "updatedAt": "2026-03-08T12:38:20.618Z",
       "settings": {
@@ -105,10 +105,10 @@
         "e2047c60-754a-4b8d-a0a2-cd781501ffac"
       ],
       "createdAt": "2026-03-08T07:48:57.354Z",
-      "updatedAt": "2026-03-08T16:16:30.341Z",
+      "updatedAt": "2026-03-09T05:29:41.864Z",
       "lastMessage": {
-        "text": "zo'r",
-        "timestamp": "2026-03-08T16:16:30.341Z"
+        "text": "jyjykyk",
+        "timestamp": "2026-03-09T05:29:41.864Z"
       }
     }
   ],
@@ -374,6 +374,96 @@
       "messageType": "text",
       "text": "zo'r",
       "timestamp": "2026-03-08T16:16:30.341Z",
+      "isRead": true
+    },
+    {
+      "messageId": "34d452d7-fdf2-47df-87de-9dc1ea23d6f3",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "aslom",
+      "timestamp": "2026-03-09T04:49:52.892Z",
+      "isRead": true
+    },
+    {
+      "messageId": "06cb3b1a-0939-4758-91b1-69d1b8c7bc95",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "yangi kun xayrli bo'lsin",
+      "timestamp": "2026-03-09T04:50:13.155Z",
+      "isRead": true
+    },
+    {
+      "messageId": "e51b45cb-30b6-4c47-b620-ccbd310c6632",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "cf714802-d296-4236-84ee-382dccc7b28c",
+      "messageType": "text",
+      "text": "salom",
+      "timestamp": "2026-03-09T04:50:27.542Z",
+      "isRead": true
+    },
+    {
+      "messageId": "d32ed50f-9e98-466e-bfac-6a8679727643",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "cf714802-d296-4236-84ee-382dccc7b28c",
+      "messageType": "text",
+      "text": "yaxshimisiz",
+      "timestamp": "2026-03-09T04:50:40.456Z",
+      "isRead": true
+    },
+    {
+      "messageId": "fe6d9346-0098-4790-9124-83cd3cf8bc5e",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "cf714802-d296-4236-84ee-382dccc7b28c",
+      "messageType": "text",
+      "text": "o'zizga ham xayrli bo'lsin",
+      "timestamp": "2026-03-09T04:51:16.214Z",
+      "isRead": true
+    },
+    {
+      "messageId": "15e9e0ef-7305-486a-aced-765e2f6c11a9",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "aslom",
+      "timestamp": "2026-03-09T05:23:59.339Z",
+      "isRead": true
+    },
+    {
+      "messageId": "4516ef1f-1217-430c-a3f0-6dc816a48917",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "...................",
+      "timestamp": "2026-03-09T05:24:22.207Z",
+      "isRead": true
+    },
+    {
+      "messageId": "7cb57957-9d7d-42cf-8b74-d13dd8bddeca",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": ".",
+      "timestamp": "2026-03-09T05:24:41.242Z",
+      "isRead": true
+    },
+    {
+      "messageId": "ed5da8c1-c031-48c1-b54f-0f6a0e0593bb",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "loigjlyl",
+      "timestamp": "2026-03-09T05:25:30.321Z",
+      "isRead": true
+    },
+    {
+      "messageId": "19e394a8-b4f9-419b-a0a1-3dec9db55a76",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "cf714802-d296-4236-84ee-382dccc7b28c",
+      "messageType": "text",
+      "text": "jyjykyk",
+      "timestamp": "2026-03-09T05:29:41.864Z",
       "isRead": true
     }
   ]

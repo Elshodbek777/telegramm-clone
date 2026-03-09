@@ -867,6 +867,17 @@ app.get('/api/v1/chats/my', authenticate, (req: any, res) => {
           }
         }
 
+        // Count online members
+        let onlineCount = 0;
+        for (const memberId of group.members) {
+          const member = users.get(memberId);
+          if (member && member.isOnline) {
+            onlineCount++;
+          }
+        }
+        
+        console.log(`📊 Group ${groupId} online count: ${onlineCount}/${group.members.length} (user: ${currentUserId})`);
+
         userChats.push({
           chatId: groupId,
           type: 'group',
@@ -874,6 +885,7 @@ app.get('/api/v1/chats/my', authenticate, (req: any, res) => {
           groupDescription: group.description,
           groupPhotoUrl: group.photoUrl,
           memberCount: group.members.length,
+          onlineCount,
           isAdmin: group.admins.includes(currentUserId),
           lastMessage: group.lastMessage,
           updatedAt: group.updatedAt,
@@ -1916,6 +1928,26 @@ const notifyUserStatus = (userId: string, isOnline: boolean) => {
           lastSeen: user?.lastSeen,
         });
       }
+    }
+  }
+  
+  // Also notify all groups where this user is a member
+  for (const [groupId, group] of groups.entries()) {
+    if (group.members.includes(userId)) {
+      // Notify all other group members
+      group.members.forEach((memberId: string) => {
+        if (memberId !== userId) {
+          const memberSocketId = userSockets.get(memberId);
+          if (memberSocketId) {
+            const user = users.get(userId);
+            io.to(memberSocketId).emit('user:status', {
+              userId,
+              isOnline,
+              lastSeen: user?.lastSeen,
+            });
+          }
+        }
+      });
     }
   }
 };

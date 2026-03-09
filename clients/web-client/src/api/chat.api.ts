@@ -20,6 +20,7 @@ export interface Chat {
   groupDescription?: string;
   groupPhotoUrl?: string;
   memberCount?: number;
+  onlineCount?: number;
   isAdmin?: boolean;
   // Common fields
   lastMessage: {

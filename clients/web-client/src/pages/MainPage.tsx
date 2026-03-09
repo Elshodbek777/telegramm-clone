@@ -425,6 +425,16 @@ export default function MainPage() {
         // Message is for a different chat - update unread count
         if (message.senderId !== user?.userId) {
           setChats((prevChats) => {
+            const chatExists = prevChats.some((chat) => chat.chatId === message.chatId);
+            
+            if (!chatExists) {
+              // Chat doesn't exist in list - reload chats to get the new chat
+              if (sessionToken) {
+                loadChats();
+              }
+              return prevChats;
+            }
+            
             const updatedChats = prevChats.map((chat) => {
               if (chat.chatId === message.chatId) {
                 return {
@@ -446,12 +456,13 @@ export default function MainPage() {
       }
     });
 
-    // Listen for user status changes (only for private chats)
+    // Listen for user status changes
     socket.on('user:status', ({ userId, isOnline, lastSeen }) => {
       // Update chat list
       setChats((prevChats) =>
         prevChats.map((chat) => {
           if (chat.type === 'private' && chat.participant?.userId === userId && chat.participant) {
+            // Update private chat participant status
             return {
               ...chat,
               participant: {
@@ -470,6 +481,11 @@ export default function MainPage() {
           return chat;
         })
       );
+
+      // Reload chats to get updated online counts for groups
+      if (sessionToken) {
+        loadChats();
+      }
 
       // Update selected chat if it's the same user
       if (selectedChat && selectedChat.type === 'private' && selectedChat.participant?.userId === userId && selectedChat.participant) {
@@ -968,10 +984,18 @@ export default function MainPage() {
                           )}
                         </div>
                       </div>
-                      {chat.lastMessage ? (
-                        <p className="text-sm text-gray-500 truncate">{chat.lastMessage.text}</p>
+                      {chat.type === 'group' ? (
+                        // Group: show member count and online count
+                        <p className="text-sm text-gray-500">
+                          {chat.memberCount} members{chat.onlineCount && chat.onlineCount > 0 ? `, ${chat.onlineCount} online` : ''}
+                        </p>
                       ) : (
-                        <p className="text-sm text-gray-400 italic">No messages yet</p>
+                        // Private chat: show last message
+                        chat.lastMessage ? (
+                          <p className="text-sm text-gray-500 truncate">{chat.lastMessage.text}</p>
+                        ) : (
+                          <p className="text-sm text-gray-400 italic">No messages yet</p>
+                        )
                       )}
                     </div>
                   </button>
@@ -1053,7 +1077,7 @@ export default function MainPage() {
                   </h2>
                   <p className="text-xs md:text-sm text-gray-500">
                     {selectedChat.type === 'group' ? (
-                      // Group info - show typing or member count
+                      // Group info - show typing or member count with online count
                       isTyping && typingUserName ? (
                         <span className="flex items-center gap-1 text-telegram-blue">
                           <span>{typingUserName} is typing</span>
@@ -1064,7 +1088,12 @@ export default function MainPage() {
                           </span>
                         </span>
                       ) : (
-                        <span>{selectedChat.memberCount} members</span>
+                        <span>
+                          {selectedChat.memberCount} members
+                          {selectedChat.onlineCount && selectedChat.onlineCount > 0 && (
+                            <span>, {selectedChat.onlineCount} online</span>
+                          )}
+                        </span>
                       )
                     ) : (
                       // Private chat status
