@@ -51,8 +51,8 @@
       "username": "prox",
       "bio": "Maqsad: 600 qadamni tezroq tugatish",
       "profilePhotoUrl": "http://localhost:4000/uploads/1772969751251-paysj3.jpg",
-      "isOnline": true,
-      "lastSeen": "2026-03-09T05:45:52.921Z",
+      "isOnline": false,
+      "lastSeen": "2026-03-09T10:02:30.935Z",
       "createdAt": "2026-03-08T07:46:55.068Z",
       "updatedAt": "2026-03-08T11:35:51.253Z",
       "settings": {
@@ -78,8 +78,8 @@
       "username": "prox",
       "bio": "Maqsad: 600 qadamni tezroq tugatish",
       "profilePhotoUrl": "http://localhost:4000/uploads/1772969779751-11l7e.jpg",
-      "isOnline": true,
-      "lastSeen": "2026-03-09T05:45:49.839Z",
+      "isOnline": false,
+      "lastSeen": "2026-03-09T10:02:30.933Z",
       "createdAt": "2026-03-08T07:48:04.575Z",
       "updatedAt": "2026-03-08T12:38:20.618Z",
       "settings": {
@@ -105,10 +105,10 @@
         "e2047c60-754a-4b8d-a0a2-cd781501ffac"
       ],
       "createdAt": "2026-03-08T07:48:57.354Z",
-      "updatedAt": "2026-03-09T05:29:41.864Z",
+      "updatedAt": "2026-03-09T09:37:37.897Z",
       "lastMessage": {
-        "text": "jyjykyk",
-        "timestamp": "2026-03-09T05:29:41.864Z"
+        "text": "salom",
+        "timestamp": "2026-03-09T09:37:37.897Z"
       }
     }
   ],
@@ -127,10 +127,10 @@
         "cf714802-d296-4236-84ee-382dccc7b28c"
       ],
       "createdAt": "2026-03-08T12:59:25.195Z",
-      "updatedAt": "2026-03-08T13:29:50.624Z",
+      "updatedAt": "2026-03-09T09:43:26.251Z",
       "lastMessage": {
-        "text": "📎 TG-CLONE.zip",
-        "timestamp": "2026-03-08T13:29:50.624Z"
+        "text": ".....",
+        "timestamp": "2026-03-09T09:43:26.251Z"
       }
     }
   ],
@@ -464,6 +464,33 @@
       "messageType": "text",
       "text": "jyjykyk",
       "timestamp": "2026-03-09T05:29:41.864Z",
+      "isRead": true
+    },
+    {
+      "messageId": "041a472d-e209-47c9-b090-1a7e837b14c8",
+      "chatId": "2ef4b7b8-74e7-47ce-94c2-739b49bffd03",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "salom",
+      "timestamp": "2026-03-09T09:37:37.897Z",
+      "isRead": true
+    },
+    {
+      "messageId": "f7f1c2cd-24b7-41e7-b247-a154f03a69d2",
+      "chatId": "b00e4b88-7ace-4629-985a-13dca03310c2",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": "group faol bo'lingla",
+      "timestamp": "2026-03-09T09:37:56.762Z",
+      "isRead": true
+    },
+    {
+      "messageId": "cb3e4211-1751-4335-867a-d8fc922398f7",
+      "chatId": "b00e4b88-7ace-4629-985a-13dca03310c2",
+      "senderId": "e2047c60-754a-4b8d-a0a2-cd781501ffac",
+      "messageType": "text",
+      "text": ".....",
+      "timestamp": "2026-03-09T09:43:26.251Z",
       "isRead": true
     }
   ]
