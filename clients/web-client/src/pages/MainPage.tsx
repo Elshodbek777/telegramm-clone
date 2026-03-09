@@ -491,7 +491,7 @@ export default function MainPage() {
         if (sessionToken) {
           loadChats();
         }
-      }, 300); // Wait 300ms before reloading chats
+      }, 500); // Wait 500ms before reloading chats
 
       // Update selected chat if it's the same user
       if (selectedChat && selectedChat.type === 'private' && selectedChat.participant?.userId === userId && selectedChat.participant) {
